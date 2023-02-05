@@ -7,10 +7,10 @@ interface BotaoProps {
 }
 
 export default function Botao(props: BotaoProps) {
-    const cor = props.cor ?? 'gray'
+    const cor = props.cor === 'green' ? 'bg-green-500' : props.cor === 'blue' ? 'bg-blue-500' : 'bg-gray-500'
     return (
         <button onClick={props.onClick} className={`
-            bg-${cor}-700 
+            ${cor}
             text-white px-4 py-2 rounded-md
             ${props.className}
         `}>
